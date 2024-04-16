@@ -1,34 +1,17 @@
 {
-	"name": "vscode-cdp-proxy",
-	"version": "0.0.1",
-	"private": false,
-	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandCdpProxy#readme",
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandCdpProxy/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+HTTPS://github.com/CodeEditorLand/LandCdpProxy.git"
-	},
-	"license": "SEE LICENSE IN LICENSE",
 	"author": {
-		"name": "Land",
 		"email": "Land@Playform.Cloud",
+		"name": "Land",
 		"url": "HTTPS://Land.Playform.Cloud"
 	},
-	"type": "module",
-	"main": "dist/index.js",
-	"scripts": {
-		"Document": "Document 'Source/**/*.ts'",
-		"compile": "rimraf dist && tsc && cpy src/cdp.d.ts dist",
-		"prepublishOnly": "Build 'Source/**/*.ts'",
-		"test:unit": "mocha --opts mocha.opts"
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandCdpProxy/issues"
 	},
 	"dependencies": {
 		"cockatiel": "3.1.2",
 		"ws": "8.16.0"
 	},
+	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
 	"devDependencies": {
 		"@playform/build": "0.0.7",
 		"@playform/document": "0.0.6",
@@ -40,7 +23,24 @@
 		"devtools-protocol": "0.0.1286932",
 		"rimraf": "5.0.5"
 	},
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandCdpProxy#readme",
+	"license": "SEE LICENSE IN LICENSE",
+	"main": "dist/index.js",
+	"name": "vscode-cdp-proxy",
+	"private": false,
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandCdpProxy.git"
+	},
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"compile": "rimraf dist && tsc && cpy src/cdp.d.ts dist",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
+		"test:unit": "mocha --opts mocha.opts"
+	},
+	"type": "module",
+	"version": "0.0.1"
 }
