@@ -3,6 +3,9 @@
 	"version": "0.0.1",
 	"private": false,
 	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
+	"keywords": [
+		"land"
+	],
 	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandCdpProxy#readme",
 	"bugs": {
 		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandCdpProxy/issues"
