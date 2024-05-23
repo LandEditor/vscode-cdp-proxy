@@ -17,7 +17,7 @@
 		"@types/ws": "8.5.10",
 		"chai": "5.1.1",
 		"cpy-cli": "5.0.0",
-		"devtools-protocol": "0.0.1302984",
+		"devtools-protocol": "0.0.1304863",
 		"rimraf": "5.0.7"
 	}
 }
