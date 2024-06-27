@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"cockatiel": "2.0.2",
-		"ws": "8.2.3"
+		"ws": "8.17.1"
 	},
 	"devDependencies": {
 		"@types/chai": "4.2.22",
