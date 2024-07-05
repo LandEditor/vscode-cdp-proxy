@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"cockatiel": "3.1.3",
-		"ws": "8.17.1"
+		"ws": "8.18.0"
 	},
 	"devDependencies": {
 		"@types/chai": "4.3.16",
@@ -17,7 +17,7 @@
 		"@types/ws": "8.5.10",
 		"chai": "5.1.1",
 		"cpy-cli": "5.0.0",
-		"devtools-protocol": "0.0.1319565",
+		"devtools-protocol": "0.0.1323532",
 		"rimraf": "5.0.7"
 	}
 }
