@@ -1,16 +1,9 @@
 {
-	"name": "vscode-cdp-proxy",
-	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
-	"main": "dist/index.js",
-	"scripts": {
-		"compile": "rimraf dist && tsc && cpy src/cdp.d.ts dist",
-		"prepublishOnly": "npm run compile",
-		"test:unit": "mocha --opts mocha.opts"
-	},
 	"dependencies": {
 		"cockatiel": "2.0.2",
 		"ws": "8.2.3"
 	},
+	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
 	"devDependencies": {
 		"@types/chai": "4.2.22",
 		"@types/node": "16.11.1",
@@ -19,5 +12,12 @@
 		"cpy-cli": "3.1.1",
 		"devtools-protocol": "0.0.932485",
 		"rimraf": "3.0.2"
+	},
+	"main": "dist/index.js",
+	"name": "vscode-cdp-proxy",
+	"scripts": {
+		"compile": "rimraf dist && tsc && cpy src/cdp.d.ts dist",
+		"prepublishOnly": "npm run compile",
+		"test:unit": "mocha --opts mocha.opts"
 	}
 }
