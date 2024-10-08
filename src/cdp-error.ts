@@ -2,6 +2,10 @@
  * Copyright (C) Microsoft Corporation. All rights reserved.
  *--------------------------------------------------------*/
 
-export interface IDisposable {
-	dispose(): void;
+import { IProtocolError } from './connection';
+
+export class CdpError extends Error {
+  constructor(public readonly cause: IProtocolError) {
+    super(cause.error.message);
+  }
 }
