@@ -10,7 +10,7 @@
 		"@types/ws": "8.5.12",
 		"chai": "5.1.1",
 		"cpy-cli": "5.0.0",
-		"devtools-protocol": "0.0.1363470",
+		"devtools-protocol": "0.0.1366620",
 		"rimraf": "6.0.1"
 	},
 	"main": "dist/index.js",
