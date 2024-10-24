@@ -8,7 +8,7 @@
 		"@types/chai": "5.0.0",
 		"@types/node": "22.7.9",
 		"@types/ws": "8.5.12",
-		"chai": "5.1.1",
+		"chai": "5.1.2",
 		"cpy-cli": "5.0.0",
 		"devtools-protocol": "0.0.1371839",
 		"rimraf": "6.0.1"
