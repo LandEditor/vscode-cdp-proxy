@@ -6,7 +6,7 @@
 	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
 	"devDependencies": {
 		"@types/chai": "5.0.1",
-		"@types/node": "22.8.2",
+		"@types/node": "22.8.4",
 		"@types/ws": "8.5.12",
 		"chai": "5.1.2",
 		"cpy-cli": "5.0.0",
