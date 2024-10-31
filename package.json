@@ -6,11 +6,11 @@
 	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
 	"devDependencies": {
 		"@types/chai": "5.0.1",
-		"@types/node": "22.8.4",
+		"@types/node": "22.8.6",
 		"@types/ws": "8.5.12",
 		"chai": "5.1.2",
 		"cpy-cli": "5.0.0",
-		"devtools-protocol": "0.0.1375038",
+		"devtools-protocol": "0.0.1376096",
 		"rimraf": "6.0.1"
 	},
 	"main": "dist/index.js",
