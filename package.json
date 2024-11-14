@@ -1,16 +1,16 @@
 {
 	"dependencies": {
-		"cockatiel": "^2.0.2",
-		"ws": "^8.2.3"
+		"cockatiel": "^3.2.1",
+		"ws": "^8.18.0"
 	},
 	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
 	"devDependencies": {
-		"@types/chai": "^4.2.22",
-		"@types/node": "^16.11.1",
-		"@types/ws": "^8.2.0",
-		"chai": "^4.3.4",
-		"devtools-protocol": "0.0.932485",
-		"rimraf": "^3.0.2"
+		"@types/chai": "^5.0.1",
+		"@types/node": "^22.9.0",
+		"@types/ws": "^8.5.13",
+		"chai": "^5.1.2",
+		"devtools-protocol": "0.0.1380148",
+		"rimraf": "^6.0.1"
 	},
 	"main": "dist/index.js",
 	"name": "vscode-cdp-proxy",
