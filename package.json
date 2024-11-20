@@ -8,15 +8,15 @@
 		"test:unit": "mocha --opts mocha.opts"
 	},
 	"dependencies": {
-		"cockatiel": "^3.2.1",
-		"ws": "^8.18.0"
+		"cockatiel": "3.2.1",
+		"ws": "8.18.0"
 	},
 	"devDependencies": {
-		"@types/chai": "^5.0.1",
-		"@types/node": "^22.9.1",
-		"@types/ws": "^8.5.13",
-		"chai": "^5.1.2",
+		"@types/chai": "5.0.1",
+		"@types/node": "22.9.1",
+		"@types/ws": "8.5.13",
+		"chai": "5.1.2",
 		"devtools-protocol": "0.0.1383960",
-		"rimraf": "^6.0.1"
+		"rimraf": "6.0.1"
 	}
 }
