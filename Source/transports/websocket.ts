@@ -99,6 +99,7 @@ export class WebSocketTransport implements ITransport {
 		}
 
 		let callback: () => void;
+
 		const result = new Promise<void>((f) => (callback = f));
 		this.ws.addEventListener("close", () => callback());
 		this.ws.close();

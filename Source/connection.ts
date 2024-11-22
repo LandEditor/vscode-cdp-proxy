@@ -96,6 +96,7 @@ export class Connection {
 	 */
 	public unpause() {
 		console.log("process", this.pauseQueue);
+
 		if (!this.pauseQueue) {
 			return;
 		}
@@ -128,6 +129,7 @@ export class Connection {
 	 */
 	public call<T>(method: string, params: object): Promise<T> {
 		const id = this.lastId++;
+
 		const message: IProtocolCommand = { id, method, params };
 		this.transport.send(message);
 
@@ -141,6 +143,7 @@ export class Connection {
 	 */
 	public async close() {
 		await this.transport.close();
+
 		for (const { reject } of this.callbacks.values()) {
 			reject(new TaskCancelledError("CDP connection closed"));
 		}
@@ -160,6 +163,7 @@ export class Connection {
 						) => {
 							const evt = `${domain}.${eventName}`;
 							this.innerEmitter.on(evt, listener);
+
 							return () => this.innerEmitter.off(evt, listener);
 						};
 					}
@@ -182,16 +186,20 @@ export class Connection {
 			const asCommand = message as IProtocolCommand;
 			this.commandEmitter.emit(asCommand);
 			this.innerEmitter.emit(asCommand.method, asCommand.params);
+
 			return;
 		}
 
 		this.replyEmitter.emit(message as IProtocolError | IProtocolSuccess);
+
 		const callback = this.callbacks.get(message.id);
+
 		if (!callback) {
 			return;
 		}
 
 		this.callbacks.delete(message.id);
+
 		if ("error" in message) {
 			callback.reject(new CdpError(message));
 		} else if ("result" in message) {
