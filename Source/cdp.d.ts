@@ -26,50 +26,95 @@ export namespace Cdp {
 		 * Resumes previously-paused events
 		 */
 		resume(): void;
+
 		Accessibility: AccessibilityApi;
+
 		Animation: AnimationApi;
+
 		ApplicationCache: ApplicationCacheApi;
+
 		Audits: AuditsApi;
+
 		BackgroundService: BackgroundServiceApi;
+
 		Browser: BrowserApi;
+
 		CacheStorage: CacheStorageApi;
+
 		Cast: CastApi;
+
 		Console: ConsoleApi;
+
 		CSS: CSSApi;
+
 		Database: DatabaseApi;
+
 		Debugger: DebuggerApi;
+
 		DeviceOrientation: DeviceOrientationApi;
+
 		DOM: DOMApi;
+
 		DOMDebugger: DOMDebuggerApi;
+
 		DOMSnapshot: DOMSnapshotApi;
+
 		DOMStorage: DOMStorageApi;
+
 		Emulation: EmulationApi;
+
 		Fetch: FetchApi;
+
 		HeadlessExperimental: HeadlessExperimentalApi;
+
 		HeapProfiler: HeapProfilerApi;
+
 		IndexedDB: IndexedDBApi;
+
 		Input: InputApi;
+
 		Inspector: InspectorApi;
+
 		IO: IOApi;
+
 		LayerTree: LayerTreeApi;
+
 		Log: LogApi;
+
 		Media: MediaApi;
+
 		Memory: MemoryApi;
+
 		Network: NetworkApi;
+
 		Overlay: OverlayApi;
+
 		Page: PageApi;
+
 		Performance: PerformanceApi;
+
 		Profiler: ProfilerApi;
+
 		Runtime: RuntimeApi;
+
 		Schema: SchemaApi;
+
 		Security: SecurityApi;
+
 		ServiceWorker: ServiceWorkerApi;
+
 		Storage: StorageApi;
+
 		SystemInfo: SystemInfoApi;
+
 		Target: TargetApi;
+
 		Tethering: TetheringApi;
+
 		Tracing: TracingApi;
+
 		WebAudio: WebAudioApi;
+
 		WebAuthn: WebAuthnApi;
 	}
 

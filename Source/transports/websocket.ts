@@ -20,8 +20,11 @@ export class WebSocketError extends Error {
  */
 export class WebSocketTransport implements ITransport {
 	private ws: WebSocket | undefined;
+
 	private endEmitter = new EventEmitter<void>();
+
 	private messageEmitter = new EventEmitter<object>();
+
 	private errorEmitter = new EventEmitter<Error>();
 
 	/**
@@ -54,15 +57,19 @@ export class WebSocketTransport implements ITransport {
 		return await new Promise<WebSocketTransport>((resolve, reject) => {
 			const onCancel = cancellationToken.onCancellationRequested(() => {
 				ws.close();
+
 				reject(new TaskCancelledError());
 			});
 
 			ws.addEventListener("open", () => {
 				resolve(new WebSocketTransport(ws));
+
 				onCancel.dispose();
 			});
+
 			ws.addEventListener("error", () => {
 				reject();
+
 				onCancel.dispose();
 			});
 		});
@@ -70,6 +77,7 @@ export class WebSocketTransport implements ITransport {
 
 	constructor(ws: WebSocket) {
 		this.ws = ws;
+
 		this.ws.addEventListener("message", (event) => {
 			this.messageEmitter.emit(JSON.parse(event.data as string));
 		});
@@ -101,8 +109,11 @@ export class WebSocketTransport implements ITransport {
 		let callback: () => void;
 
 		const result = new Promise<void>((f) => (callback = f));
+
 		this.ws.addEventListener("close", () => callback());
+
 		this.ws.close();
+
 		this.ws = undefined;
 
 		return result;

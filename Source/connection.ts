@@ -11,21 +11,29 @@ import { ITransport } from "./transports/transports";
 
 export interface IProtocolCommand {
 	id?: number;
+
 	method: string;
+
 	params: object;
+
 	sessionId?: string;
 }
 
 export interface IProtocolError {
 	id: number;
+
 	method?: string;
+
 	error: { code: number; message: string };
+
 	sessionId?: string;
 }
 
 export interface IProtocolSuccess {
 	id: number;
+
 	result: object;
+
 	sessionId?: string;
 }
 
@@ -33,6 +41,7 @@ type ProtocolMessage = IProtocolCommand | IProtocolSuccess | IProtocolError;
 
 interface IDeferred<T> {
 	resolve(data: T): void;
+
 	reject(err: Error): void;
 }
 
@@ -49,10 +58,15 @@ export class Connection {
 	}) as Cdp.Api;
 
 	private lastId = 0;
+
 	private pauseQueue?: ProtocolMessage[];
+
 	private readonly callbacks = new Map<number, IDeferred<unknown>>();
+
 	private readonly innerEmitter = new NodeEmitter();
+
 	private readonly commandEmitter = new EventEmitter<IProtocolCommand>();
+
 	private readonly replyEmitter = new EventEmitter<
 		IProtocolSuccess | IProtocolError
 	>();
@@ -102,6 +116,7 @@ export class Connection {
 		}
 
 		const queue = this.pauseQueue;
+
 		this.pauseQueue = undefined;
 
 		for (const item of queue) {
@@ -131,6 +146,7 @@ export class Connection {
 		const id = this.lastId++;
 
 		const message: IProtocolCommand = { id, method, params };
+
 		this.transport.send(message);
 
 		return new Promise<T>((resolve, reject) => {
@@ -162,6 +178,7 @@ export class Connection {
 							listener: (params: object) => void,
 						) => {
 							const evt = `${domain}.${eventName}`;
+
 							this.innerEmitter.on(evt, listener);
 
 							return () => this.innerEmitter.off(evt, listener);
@@ -184,7 +201,9 @@ export class Connection {
 			// for some reason, TS doesn't narrow this even though IProtocolCommand
 			// is the only type of the tuple where id can be undefined.
 			const asCommand = message as IProtocolCommand;
+
 			this.commandEmitter.emit(asCommand);
+
 			this.innerEmitter.emit(asCommand.method, asCommand.params);
 
 			return;

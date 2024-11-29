@@ -13,6 +13,7 @@ import { WebSocketTransport } from "./transports/websocket";
 
 export interface IServerOptions {
 	host: string;
+
 	port: string;
 }
 
@@ -30,15 +31,18 @@ export class Server implements IDisposable {
 			// The adapter makes an http call to discover the address to connect
 			// to first. Mock that out here.
 			const resolvedPort = port || (server.address() as AddressInfo).port;
+
 			res.write(
 				JSON.stringify({
 					webSocketDebuggerUrl: `ws://${host}:${resolvedPort}/ws`,
 				}),
 			);
+
 			res.end();
 		});
 
 		const wss = new WebSocketServer({ server });
+
 		server.listen(port);
 
 		return new Server(wss, server);
@@ -75,6 +79,7 @@ export class Server implements IDisposable {
 	 */
 	public dispose() {
 		this.wss.close();
+
 		this.httpServer.close();
 	}
 }
