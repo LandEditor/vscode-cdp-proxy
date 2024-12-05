@@ -9,7 +9,7 @@
 		"@types/node": "22.10.1",
 		"@types/ws": "8.5.13",
 		"chai": "5.1.2",
-		"devtools-protocol": "0.0.1391447",
+		"devtools-protocol": "0.0.1392070",
 		"rimraf": "6.0.1"
 	},
 	"main": "dist/index.js",
