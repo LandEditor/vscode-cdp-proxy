@@ -16,7 +16,7 @@
 		"@types/node": "22.10.6",
 		"@types/ws": "8.5.13",
 		"chai": "5.1.2",
-		"devtools-protocol": "0.0.1404580",
+		"devtools-protocol": "0.0.1406504",
 		"rimraf": "6.0.1"
 	}
 }
