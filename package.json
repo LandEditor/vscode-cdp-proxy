@@ -13,10 +13,10 @@
 	},
 	"devDependencies": {
 		"@types/chai": "5.0.1",
-		"@types/node": "22.13.1",
+		"@types/node": "22.13.4",
 		"@types/ws": "8.5.14",
-		"chai": "5.1.2",
-		"devtools-protocol": "0.0.1419081",
+		"chai": "5.2.0",
+		"devtools-protocol": "0.0.1420292",
 		"rimraf": "6.0.1"
 	}
 }
