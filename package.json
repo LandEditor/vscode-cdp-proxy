@@ -1,5 +1,5 @@
 {
-	"name": "vscode-cdp-proxy",
+	"name": "@codeeditorland/cdp-proxy",
 	"description": "Sample Chrome Debug Protocol proxy used to extend vscode-js-debug",
 	"main": "dist/index.js",
 	"scripts": {
